@@ -1,28 +1,31 @@
-/* Ensure body fills viewport */
 html, body {
   height: 100%;
   margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
 }
 
-/* Container with explicit height */
 .container {
   display: flex;
   gap: 20px;
-  height: 120px; /* Must be enough for squares */
 }
 
-/* Squares */
+/* Base square color */
 .focus-sq {
   width: 100px;
-  height: 100px; /* Key: explicit height */
+  height: 100px;
   background-color: #E6E6FA; /* Lavender */
-  cursor: pointer;
   transition: background-color 0.3s;
-  display: block;  /* Avoid collapsing */
-  position: relative; /* Prevent flex collapse issues */
+  display: block;
+}
+
+/* Hover effect on any square */
+#square1:hover ~ #square2,
+#square1:hover ~ #square3,
+#square2:hover ~ #square1,
+#square2:hover ~ #square3,
+#square3:hover ~ #square1,
+#square3:hover ~ #square2 {
+  background-color: #6F4E37; /* Coffee */
 }
