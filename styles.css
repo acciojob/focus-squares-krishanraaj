@@ -1,24 +1,28 @@
-/* Make body fill screen and center content */
+/* Ensure body fills viewport */
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f0f0f0;
 }
 
-/* Container holds squares in a row */
+/* Container with explicit height */
 .container {
   display: flex;
-  gap: 20px; /* space between squares */
+  gap: 20px;
+  height: 120px; /* Must be enough for squares */
 }
 
-/* Each square must have width and height for Cypress */
+/* Squares */
 .focus-sq {
   width: 100px;
-  height: 100px;           /* Key fix: explicit height */
+  height: 100px; /* Key: explicit height */
   background-color: #E6E6FA; /* Lavender */
   cursor: pointer;
   transition: background-color 0.3s;
-  display: block;           /* Ensure block-level rendering */
+  display: block;  /* Avoid collapsing */
+  position: relative; /* Prevent flex collapse issues */
 }
