@@ -1,9 +1,16 @@
+/* Ensure body has some height to prevent collapsing */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* space between squares */
+}
+
 .focus-sq {
   width: 100px;
-  height: 100px;
+  height: 100px;  /* Ensure height is set */
   background-color: #E6E6FA; /* Lavender */
-  display: inline-block;
-  margin: 10px;
   transition: background-color 0.3s;
   cursor: pointer;
 }
