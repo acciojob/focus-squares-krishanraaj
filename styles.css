@@ -1,10 +1,4 @@
-/*  your css code here. If applicable */
 .focus-sq {
-  width: 100px;
-  height: 100px;
-  background-color: #E6E6FA; /* Lavender */
-  display: inline-block;
-  margin: 10px;.focus-sq {
   width: 100px;
   height: 100px;
   background-color: #E6E6FA; /* Lavender */
@@ -12,7 +6,4 @@
   margin: 10px;
   transition: background-color 0.3s;
   cursor: pointer;
-}
-
-  transition: background-color 0.3s;
 }
